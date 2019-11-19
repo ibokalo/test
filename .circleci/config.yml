@@ -41,9 +41,9 @@ jobs:
       - run: mvn integration-test
 workflows:
   version: 2
-    deploy:
-      jobs:
-        - build:
-          filters:
-            branches:
-              - test
+  deploy:
+    jobs:
+      - build:
+        filters:
+          branches:
+            - test
